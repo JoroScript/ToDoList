@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script defer src="main.js"></script></head>
+<body>
+    
+    <h1 class="header">To Do App!</h1>
+    <header>
+        <nav>
+           
+            <button id="addPr">Add New Project</button>
+            <button id="deleteProject">Delete Project</button>
+            <button id="openTaskDialog">Add Task</button>
+        </nav>
+    </header>
+    <dialog id="addProjectDialog">
+        <form id="addProject">
+            <label for="prTitle">Project Title:</label>
+            <input type="text" required autocomplete="off"  name="prTitle" id="prTitle">
+            <button type="submit">Add Project</button>
+            <button id="closeProjectDialog">Close</button>
+        </form>
+    </dialog>
+    <dialog id="addTaskDialog">
+        <form id="addTask">
+            <label for="title">Title:</label>
+            <input required type="text" autocomplete="off" name="title" id="title">
+            <label for="desc">Description:</label>
+            <textarea required minlength="5" autocomplete="off" name="desc" id="desc"></textarea>
+            <label for="date">Date:</label>
+            <input required type="date" name="date" id="date">
+            <label for="priority">Date:</label>
+            <select name="priority" id="priority">
+                <option selected value="light">light</option>
+                <option value="medium">medium</option>
+                <option value="urgent">urgent</option>
+            </select>
+            <button type="submit">Add Task</button>
+            <button type="button" id="closeTaskDialog">Close</button>
+        </form>
+    </dialog>
+   
+   <div id="mainContainer">
+    <div id="projectsAside">
+        <h2>Projects</h2>
+        <div class="projects">
+        <!-- <button id="mainPr">Main Project</button> -->
+        </div>
+        <div class="asideFooter"></div>
+    </div>
+    <div id="todosContainer">
+      
+    </div>
+   </div>
+  
+</body>
+</html>
